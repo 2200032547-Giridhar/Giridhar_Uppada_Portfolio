@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Giridhar Uppada — Computer Science graduate and Full Stack Developer portfolio."
+    />
+    <title>Giridhar Uppada | Full Stack Developer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #10151e;
+        --panel: #192331;
+        --panel2: #223044;
+        --text: #e8edf5;
+        --muted: #afbed0;
+        --accent: #20c9ac;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: Heebo, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.75;
+      }
+      a {
+        color: var(--accent);
+      }
+      a:hover {
+        color: #77f0da;
+      }
+      .sidebar {
+        background: #17202d;
+        min-height: 100vh;
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 45px 25px 20px;
+      }
+      .avatar {
+        object-fit: cover;
+        object-position: center 35%;
+        display: block;
+        height: 155px;
+        width: 155px;
+        border-radius: 50%;
+        border: 4px solid var(--accent);
+        margin: 0 auto 25px;
+        display: grid;
+        place-items: center;
+        background: #293b4f;
+        font-size: 55px;
+        font-weight: 800;
+        color: var(--accent);
+      }
+      .name {
+        font-size: 2rem;
+        font-weight: 800;
+      }
+      .role {
+        color: var(--accent);
+        font-weight: 600;
+      }
+      .social a {
+        display: inline-grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        background: #2a394c;
+        border-radius: 8px;
+        margin: 4px;
+        color: white;
+      }
+      .social a:hover {
+        background: var(--accent);
+        color: #10151e;
+      }
+      .sidebar-footer {
+        margin-top: auto;
+      }
+      .main {
+        padding: 30px 50px 70px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .section {
+        padding: 48px 0;
+        border-bottom: 1px solid #304052;
+        scroll-margin-top: 20px;
+      }
+      .section h2 {
+        font-weight: 800;
+        margin-bottom: 28px;
+      }
+      .section h2:after {
+        content: "";
+        display: block;
+        width: 55px;
+        height: 4px;
+        background: var(--accent);
+        margin-top: 10px;
+        border-radius: 3px;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      .detail strong {
+        color: var(--accent);
+      }
+      .detail {
+        margin-bottom: 12px;
+      }
+      .stat,
+      .project,
+      .timeline,
+      .skillbox {
+        background: var(--panel);
+        border: 1px solid #304052;
+        border-radius: 12px;
+        padding: 22px;
+        height: 100%;
+      }
+      .stat b {
+        color: var(--accent);
+        font-size: 1.8rem;
+      }
+      .stat span {
+        display: block;
+        color: var(--muted);
+      }
+      .tag {
+        display: inline-block;
+        padding: 5px 11px;
+        background: #25483f;
+        color: #8ff0dc;
+        border-radius: 20px;
+        font-size: 0.83rem;
+        margin: 4px 4px 4px 0;
+      }
+      .project h5,
+      .timeline h5 {
+        font-weight: 700;
+      }
+      .date {
+        color: var(--accent);
+        font-size: 0.9rem;
+      }
+      .btn-accent {
+        background: var(--accent);
+        color: #10151e;
+        font-weight: 700;
+        border: 0;
+      }
+      .btn-accent:hover {
+        background: #70e8d3;
+        color: #10151e;
+      }
+      .btn-outline-accent {
+        border: 1px solid var(--accent);
+        color: var(--accent);
+      }
+      .btn-outline-accent:hover {
+        background: var(--accent);
+        color: #10151e;
+      }
+      .contact-link {
+        overflow-wrap: anywhere;
+      }
+      .skillbox h5 {
+        color: var(--accent);
+      }
+      .navlinks a {
+        color: var(--muted);
+        text-decoration: none;
+        margin: 0 8px;
+        font-size: 0.9rem;
+      }
+      .navlinks a:hover {
+        color: var(--accent);
+      }
+      @media (max-width: 991px) {
+        .sidebar {
+          position: relative;
+          min-height: auto;
+        }
+        .main {
+          padding: 20px 22px 60px;
+        }
+        .section {
+          padding: 38px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row g-0">
+        <aside class="col-lg-4 col-xl-3">
+          <div class="sidebar shadow">
+            <img
+              class="avatar"
+              src="profile.jpg"
+              alt="Portrait of Giridhar Uppada"
+              width="155"
+              height="155"
+            />
+            <h1 class="name">Giridhar Uppada</h1>
+            <p class="role">Full Stack Developer · Software Engineer</p>
+            <p class="muted small">
+              B.Tech Computer Science & Engineering<br />KL University · Class
+              of 2026
+            </p>
+            <div class="navlinks mb-4">
+              <a href="#about">About</a><a href="#skills">Skills</a
+              ><a href="#projects">Projects</a><a href="#contact">Contact</a>
+            </div>
+            <div class="social mb-4">
+              <a
+                href="https://www.linkedin.com/in/uppada-giridhar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn (add your profile URL)"
+                ><i class="fab fa-linkedin-in"></i></a
+              ><a
+                href="https://github.com/2200032547-Giridhar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub (add your profile URL)"
+                ><i class="fab fa-github"></i></a
+              ><a href="mailto:uppadagiridhar510@gmail.com" aria-label="Email"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </div>
+            <div class="sidebar-footer">
+              <a
+                class="btn btn-accent w-100 mb-2"
+                href="Giridhar_Uppada_Resume.pdf"
+                download
+                ><i class="fa fa-download me-2"></i>Download Resume</a
+              ><a class="btn btn-outline-accent w-100" href="#contact"
+                >Contact Me</a
+              ><small class="muted d-block mt-3"
+                >Open to software engineering opportunities</small
+              >
+            </div>
+          </div>
+        </aside>
+        <main class="col-lg-8 col-xl-9">
+          <div class="main">
+            <section class="section" id="about">
+              <p class="role mb-2">WELCOME TO MY PORTFOLIO</p>
+              <h2>About Me</h2>
+              <p>
+                Computer Science graduate with strong expertise in full-stack
+                web development, UI/UX design, and Python programming.
+                Experienced in designing responsive web applications,
+                integrating REST APIs, and developing scalable software
+                solutions using Java, Spring Boot, ReactJS, and Django.
+                Passionate about building user-centric applications and eager to
+                contribute technical and problem-solving skills in a software
+                engineering role.
+              </p>
+              <div class="row mt-4">
+                <div class="col-sm-6 detail">
+                  <strong>Name:</strong> Giridhar Uppada
+                </div>
+                <div class="col-sm-6 detail">
+                  <strong>Degree:</strong> B.Tech in CSE
+                </div>
+                <div class="col-sm-6 detail">
+                  <strong>Location:</strong> Srikakulam, India
+                </div>
+                <div class="col-sm-6 detail">
+                  <strong>Graduation:</strong> 2026
+                </div>
+                <div class="col-sm-6 detail">
+                  <strong>Email:</strong>
+                  <a
+                    class="contact-link"
+                    href="mailto:uppadagiridhar510@gmail.com"
+                    >uppadagiridhar510@gmail.com</a
+                  >
+                </div>
+                <div class="col-sm-6 detail">
+                  <strong>Phone:</strong>
+                  <a href="tel:+918639204857">+91 8639204857</a>
+                </div>
+              </div>
+              <div class="row g-3 mt-3">
+                <div class="col-md-4">
+                  <div class="stat">
+                    <b>9.31</b><span>B.Tech CGPA / 10</span>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="stat"><b>3</b><span>Featured Projects</span></div>
+                </div>
+                <div class="col-md-4">
+                  <div class="stat">
+                    <b>2026</b><span>Graduation Year</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section" id="skills">
+              <h2>Technical Skills</h2>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="skillbox">
+                    <h5><i class="fa fa-code me-2"></i>Programming</h5>
+                    <span class="tag">Java</span><span class="tag">Python</span
+                    ><span class="tag">C</span><span class="tag">SQL</span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="skillbox">
+                    <h5><i class="fa fa-laptop-code me-2"></i>Frontend</h5>
+                    <span class="tag">HTML</span><span class="tag">CSS</span
+                    ><span class="tag">Bootstrap</span
+                    ><span class="tag">JavaScript</span
+                    ><span class="tag">ReactJS</span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="skillbox">
+                    <h5><i class="fa fa-server me-2"></i>Backend</h5>
+                    <span class="tag">Spring Boot</span
+                    ><span class="tag">Spring MVC</span
+                    ><span class="tag">Hibernate</span
+                    ><span class="tag">Django</span
+                    ><span class="tag">Flask</span
+                    ><span class="tag">Node.js</span
+                    ><span class="tag">REST APIs</span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="skillbox">
+                    <h5>
+                      <i class="fa fa-database me-2"></i>Databases & Tools
+                    </h5>
+                    <span class="tag">MySQL</span
+                    ><span class="tag">PostgreSQL</span
+                    ><span class="tag">MongoDB</span><span class="tag">Git</span
+                    ><span class="tag">GitHub</span><span class="tag">AWS</span
+                    ><span class="tag">Google Cloud</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section" id="experience">
+              <h2>Experience</h2>
+              <div class="timeline">
+                <div class="date">July 2024 – September 2024</div>
+                <h5>AWS Cloud Virtual Internship</h5>
+                <p class="muted">AICTE – EduSkills</p>
+                <p>
+                  Online training focused on AWS cloud technologies. Gained
+                  hands-on knowledge of EC2, S3, RDS, Lambda, IAM, and VPC,
+                  along with cloud deployment, networking fundamentals, and
+                  scalable application practices.
+                </p>
+              </div>
+            </section>
+            <section class="section" id="education">
+              <h2>Education</h2>
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="timeline">
+                    <div class="date">2022 – 2026</div>
+                    <h5>B.Tech — Computer Science and Engineering</h5>
+                    <p class="mb-0">
+                      KL University, Guntur · <strong>CGPA: 9.31/10</strong>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="timeline">
+                    <div class="date">2020 – 2022</div>
+                    <h5>Intermediate</h5>
+                    <p class="mb-0">
+                      Sri Chaitanya Junior College, Visakhapatnam · CGPA: 8.7/10
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="timeline">
+                    <div class="date">2019 – 2020</div>
+                    <h5>Secondary School Certificate</h5>
+                    <p class="mb-0">
+                      Zilla Parishad High School, Patha Kojjiria · CGPA: 9.7/10
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section" id="projects">
+              <h2>Featured Projects</h2>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <article class="project">
+                    <div class="date">May 2024 · E-commerce</div>
+                    <h5>Online Bookstore</h5>
+                    <p>
+                      Designed and developed an online bookstore enabling users
+                      to browse, search, and purchase books.
+                    </p>
+                    <span class="tag">Django</span><span class="tag">MySQL</span
+                    ><span class="tag">Bootstrap</span
+                    ><span class="tag">HTML/CSS</span>
+                    <div class="mt-auto pt-2 text-center">
+                      <a
+                        class="btn btn-sm btn-outline-accent"
+                        href="https://github.com/2200032547-Giridhar/SDP-20"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i class="fab fa-github me-1"></i> View Code
+                      </a>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6">
+                  <article class="project">
+                    <div class="date">December 2024 · Education</div>
+                    <h5>Online Course Management System</h5>
+                    <p>
+                      Developed a platform for browsing, enrolling in, and
+                      managing academic courses.
+                    </p>
+                    <span class="tag">ReactJS</span
+                    ><span class="tag">Spring Boot</span
+                    ><span class="tag">Java</span><span class="tag">MySQL</span
+                    ><span class="tag">REST APIs</span>
+                    <div class="mt-auto pt-2 text-center">
+                      <a
+                        class="btn btn-sm btn-outline-accent"
+                        href="https://github.com/2200032547-Giridhar/Course_Management_System_Frontend"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i class="fab fa-github me-1"></i> View Code
+                      </a>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6">
+                  <article class="project">
+                    <div class="date">March 2025 · Academic Portal</div>
+                    <h5>Online Circular Management System</h5>
+                    <p>
+                      Built a responsive web portal for publishing, managing,
+                      and accessing official academic circulars.
+                    </p>
+                    <span class="tag">ReactJS</span
+                    ><span class="tag">JavaScript</span
+                    ><span class="tag">MongoDB</span
+                    ><span class="tag">REST APIs</span>
+                    <div class="mt-auto pt-2 text-center">
+                      <a
+                        class="btn btn-sm btn-outline-accent"
+                        href="https://github.com/2200032547-Giridhar/Online-Circular-Management-System"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i class="fab fa-github me-1"></i> View Code
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+            <section class="section" id="certifications">
+              <h2>Certifications</h2>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <div class="skillbox">
+                    <i class="fas fa-certificate role me-2"></i>Red Hat
+                    Certified Enterprise Application Developer
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="skillbox">
+                    <i class="fas fa-certificate role me-2"></i>Salesforce AI
+                    Associate
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="skillbox">
+                    <i class="fas fa-certificate role me-2"></i>Cambridge Lingua
+                    Skills
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section" id="interests">
+              <h2>Interests & Strengths</h2>
+              <p>
+                Software Development · Full-Stack Web Development · Cloud
+                Computing · UI/UX Design
+              </p>
+              <p class="muted">
+                Communication, problem solving, self-learning, presentation,
+                adaptability, analytical thinking, and teamwork.
+              </p>
+            </section>
+            <section class="section border-0" id="contact">
+              <h2>Contact Me</h2>
+              <p class="muted">
+                Interested in discussing software development roles, projects,
+                or collaboration? Reach out directly.
+              </p>
+              <p>
+                <i class="fas fa-envelope role me-2"></i
+                ><a href="mailto:uppadagiridhar510@gmail.com"
+                  >uppadagiridhar510@gmail.com</a
+                >
+              </p>
+              <p>
+                <i class="fas fa-phone role me-2"></i
+                ><a href="tel:+918639204857">+91 8639204857</a>
+              </p>
+              <p>
+                <i class="fas fa-location-dot role me-2"></i>Srikakulam, India
+              </p>
+              <a
+                class="btn btn-accent mt-2"
+                href="mailto:uppadagiridhar510@gmail.com?subject=Portfolio%20Inquiry"
+                >Send an Email</a
+              >
+            </section>
+            <footer class="muted text-center py-4 border-top border-secondary">
+              <small
+                >© 2026 Giridhar Uppada. Portfolio based on the DarkCV layout
+                concept.</small
+              >
+            </footer>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
